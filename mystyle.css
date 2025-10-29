@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: pink;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  -webkit-text-stroke: 2px black;
+  background-image: url("Berries.jpeg");
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav li a {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+
+/* Create two columns/boxes that floats next to each other */
+aside {
+  float: left;
+  width: 20%;
+  height: 600px; /* only for demonstration, should be removed */
+  background: rgba(240, 153, 153);
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: white;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.zoom-bild {
+  transition: transform 0.3s ease;
+}
+
+.zoom-bild:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(163, 24, 36, 0.8);
+}
+
+/* Style the footer */
+footer {
+  background-color: pink;
+  padding: 6px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  aside, article {
+    width: 100%;
+    height: auto;
+  }
+}
